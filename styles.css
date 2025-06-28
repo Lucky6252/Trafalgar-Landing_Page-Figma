@@ -294,7 +294,7 @@ section {
   margin-bottom: 40px;
 }
 
-/* Download our App */
+/* Download our mobile App */
 
 .DOMA .wrapper {
   display: flex;
@@ -310,6 +310,89 @@ section {
   margin-bottom: 40px;
 }
 
+/* Testimonials */
+
+.Testimonials .wrapper {
+  position: relative;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg,#67C3F3 0%, #5A98F2 100%);
+  border-radius: 24px;
+}
+
+
+.slider-container .slide {
+  border-radius: 24px;
+  background: linear-gradient(180deg,#67C3F3 0%, #5A98F2 100%);
+  height: 425px;
+  padding: 50px 50px;
+}
+
+
+.slider-container .slide h2 {
+  text-align: center;
+}
+
+.testimonial-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.testimonial-content .testimonial-left {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-content .testimonial-left img {
+  width: 133px;
+  height: 133px;
+}
+
+
+ .testimonial-left .founder-details {
+  margin-left: 30px;
+}
+
+.founder-details h4 {
+  font-family: "Mulish", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFFFFFD9;
+
+}
+
+.founder-details p {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFFD9;
+
+}
+
+.testimonial-content .testimonial-right .testimony {
+  font-family: "Mulish", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+
 /* Articles */
 .articles {
   display: flex;
@@ -318,7 +401,6 @@ section {
 }
 
 .article-img {
-  border-top: 24px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
 }
