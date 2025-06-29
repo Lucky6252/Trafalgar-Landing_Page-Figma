@@ -11,10 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
 
   <body>
@@ -204,8 +200,8 @@
     <!-- Testimonials page starts -->
     <section class="Testimonials">
       <div class="wrapper">
-        <!-- <div class="slider-container">
-          <div class="slide slide-one">
+        <div class="slider-container">
+          <div class="slide active">
             <h2 class="light">What our customer are saying</h2>
             <h2 class="title-dash light">_____</h2>
             <div class="testimonial-content">
@@ -226,7 +222,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-two">
+          <div class="slide">
             <h2 class="light">Second Customer Testimon</h2>
             <h2 class="title-dash light">_____</h2>
             <div class="testimonial-content">
@@ -247,7 +243,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-three">
+          <div class="slide">
             <h2 class="light">Third Customer Testimony</h2>
             <h2 class="title-dash light">_____</h2>
             <div class="testimonial-content">
@@ -268,7 +264,7 @@
               </div>
             </div>
           </div>
-          <div class="slide slide-four">
+          <div class="slide">
             <h2 class="light">Forth Customer Testimony</h2>
             <h2 class="title-dash light">_____</h2>
             <div class="testimonial-content">
@@ -289,47 +285,16 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              Slide 1
-              <div class="slide slide-one">
-                <h2 class="light">What our customer are saying</h2>
-                <h2 class="title-dash light">_____</h2>
-                <div class="testimonial-content">
-                  <div class="testimonial-left">
-                    <img src="images/founder.svg" alt="" />
-                    <div class="founder-details">
-                      <h4 class="founder-name">Edward Newgate</h4>
-                      <p class="job-title">Founder</p>
-                    </div>
-                  </div>
-                  <div class="testimonial-right">
-                    <p class="testimony">
-                      “Our dedicated patient engagement app and <br />
-                      web portal allow you to access information
-                      <br />instantaneously (no tedeous form, long calls, <br />
-                      or administrative hassle) and securely”
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+        <div class="controls">
+          <a class="previous" onclick="prevSlide()">
+            <img src="images/prev-slide.svg" alt="previous slide arrow" />
+          </a>
+          <div class="pagination" id="pagination"></div>
+          <a class="next" onclick="nextSlide()">
+            <img src="images/next-slide.svg" alt="next slide arrow" />
+          </a>
         </div>
       </div>
     </section>
@@ -340,22 +305,22 @@
       <div class="wrapper">
         <h2 class="dark">Check out our latest article</h2>
         <h2 class="title-dash dark">___</h2>
-        <div class="articles">
+        <div class="articles-wrapper">
           <div class="article-colum">
             <img class="article-img" src="images/article 1.png" alt="" />
-            <h4 class="article-subtitle">
-              Disease detection, check <br />
-              up in the laboratory
-            </h4>
-            <p class="article-parag">
-              In this case, the role of the health <br />
-              laboratory is very important to do <br />
-              a disease detection...
-            </p>
-            <div class="more-detail">
-              <a href="#">Read more</a>
-              <img src="images/readmore.svg" alt="" />
-            </div>
+              <h4 class="article-subtitle">
+                Disease detection, check <br />
+                up in the laboratory
+              </h4>
+              <p class="article-parag">
+                In this case, the role of the health <br />
+                laboratory is very important to do <br />
+                a disease detection...
+              </p>
+              <div class="more-detail">
+                <a href="#">Read more</a>
+                <img src="images/readmore.svg" alt="" />
+              </div>
           </div>
           <div class="article-colum">
             <img class="article-img" src="images/article 2.png" alt="" />
@@ -401,7 +366,7 @@
       <div class="wrapper">
         <!-- Company details START -->
         <div class="first-column">
-          <div class="logo">
+          <div class="logo-foot">
             <a class="footer-logo">T</a>
             <a href="#" class="footer-logo-text">Trafalgar</a>
           </div>
@@ -495,26 +460,5 @@
 
     <!-- Script connection -->
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script type="module">
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
   </body>
 </html>
