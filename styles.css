@@ -71,6 +71,10 @@ header{
   margin: 0 auto;
 }
 
+body {
+  background: #F8F8FF;
+}
+
 /* Footer */
 footer{
   background: linear-gradient(180deg,#67C3F3 0%, #5A98F2 100%);
@@ -187,6 +191,26 @@ header .left-dots {
 section{
   margin-top: 100px;
   background: #F8F8FF;
+  position: relative;
+  z-index: -10;
+}
+
+.Service .left-background {
+  position: absolute;
+  top: 2px;
+  left: -50px;
+  z-index: -1;
+}
+
+.Service .service-dots {
+  position: absolute;
+  right: 145px;
+  top: 515px;
+  z-index: -1;
+}
+
+.Service .wrapper {
+  z-index: 10;
 }
 
 h2 {
@@ -224,8 +248,8 @@ p {
   text-align: center;
   margin-top: 20px;
   width: 952px;
+  font-size: 18px;
 }
-
 
 .service-cards .top-row{
   display: flex;
@@ -235,6 +259,7 @@ p {
 .service-cards .bottom-row {
   display: flex;
   justify-content: center;
+  margin-top: -40px;
 }
 
 .service-card {
@@ -260,10 +285,6 @@ p {
   width: 100%;
   text-align: center;
   margin-top: 60px;
-}
-
-section {
-  margin-top: 100px;
 }
 
 /* LHP */
@@ -292,13 +313,27 @@ section {
 .LHP_Wording p {
   margin-top: 30px;
   margin-bottom: 40px;
+  font-size: 18px;
+  font-family: "Mulish", sans-serif;
 }
 
 /* Download our mobile App */
 
+.DOMA {
+  position: relative;
+  height: 100vh;
+  padding-top: 150px;
+}
+
 .DOMA .wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.deco-dots {
+  position: absolute;
+  right: -50px;
+  top: 0;
 }
 
 .left-doma{
@@ -308,12 +343,18 @@ section {
 .left-doma p {
   margin-top: 30px;
   margin-bottom: 40px;
+  font-size: 18px;
 }
 
 /* Testimonials */
 
+.Testimonials {
+  position: relative;
+}
+
 .Testimonials .wrapper {
   position: relative;
+  padding-top: 150px;
 }
 
 .slider-container {
@@ -323,6 +364,19 @@ section {
   height: 440px;
   overflow: hidden;
   margin: 20px auto;
+}
+
+.Testimonials .dots-right {
+  position: absolute;
+  right: 220px;
+  top: 150px;
+  z-index: 20;
+}
+
+.Testimonials .dots-left {
+  position: absolute;
+  left: 220px;
+  top: 440px;
 }
 
 .slide {
@@ -337,6 +391,7 @@ section {
   transition: left 0.5s ease;
   font-size: 24px;
   border-radius: 24px;
+  z-index: 1;
 
 }
 
@@ -452,8 +507,29 @@ section {
   display: flex;
   margin-top: 50px;
   justify-content: space-evenly;
-
   
+}
+
+.articles {
+  position: relative;
+}
+
+.articles .article-background {
+  right: -40px;
+  top: 0px;
+  position: absolute;
+}
+
+.articles .article-dots {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+}
+
+.articles .article-dots-two {
+  position: absolute;
+  bottom: -50px;
+  right: 50px;
 }
 
 .articles .wrapper {
@@ -513,6 +589,12 @@ footer .wrapper {
 .first-column .footer-logo-text {
   color: #FFFFFF;
   margin-left: 10px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.first-column .company-details {
+  font-size: 14px;
 }
 
 .footer-logo {
@@ -537,11 +619,13 @@ footer .wrapper {
 .footer-description {
   margin-top: 20px;
   margin-bottom: 40px;
+  font-size: 14px;
 }
 
 .company-column h4 {
   color: #FFFFFF;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .company-column ul{
@@ -554,11 +638,13 @@ footer .wrapper {
 
 .company-column ul li a {
   color: #FFFFFF;
+  font-size: 14px;
 }
 
 .region-column h4 {
   color: #FFFFFF;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .region-column ul {
@@ -571,11 +657,13 @@ footer .wrapper {
 
 .region-column ul li a {
   color: #FFFFFF;
+  font-size: 14px;
 }
 
 .help-column h4 {
   color: #FFFFFF;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .help-column ul {
@@ -588,6 +676,7 @@ footer .wrapper {
 
 .help-column ul li a {
   color: #FFFFFF;
+  font-size: 14px;
 }
 
 
