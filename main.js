@@ -2,6 +2,14 @@ const slides = document.querySelectorAll('.slide');
 const paginationContainer = document.getElementById('pagination');
 let currentIndex = 0;
 const nav = document.querySelector("nav");
+const toggleBtn = document.querySelector('.nav-toggle');
+const navOptions = document.querySelector('.nav-options');
+
+
+//Navigation toggle functionality
+toggleBtn.addEventListener('click', () => {
+  navOptions.classList.toggle('show');
+});
 
 //Adding stylling for nav when scrolled
 window.addEventListener("scroll", () =>{

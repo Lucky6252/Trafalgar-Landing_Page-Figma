@@ -98,7 +98,28 @@ nav.scrolled {
   padding-top: 12px;
   margin-top: 0;
   padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.nav-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 10px;
 }
 
 nav .nav-logo{
@@ -184,6 +205,7 @@ header .left-dots {
   opacity: 50%;
 }
 
+
 /* Our Services */
 
 section{
@@ -228,6 +250,10 @@ h2.light {
 p {
   color: #7D7987;
   font-weight: 300;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.6;
 }
 
 
@@ -247,6 +273,14 @@ p {
   margin-top: 20px;
   width: 952px;
   font-size: 18px;
+  overflow-wrap: break-word; 
+  word-break: break-word;      
+  white-space: normal;        
+  line-height: 1.6; 
+}
+
+.service-cards {
+  box-sizing: border-box;
 }
 
 .service-cards .top-row{
@@ -265,10 +299,21 @@ p {
   padding: 30px;
   margin: 40px;
   padding: 60px 30px;
-  width: 350px;
   height: 354px;
   background: #FFFFFF;
   box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  min-width: 260px;
+  box-sizing: border-box;
+}
+
+.top-row,
+.bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .service-card img {
@@ -676,6 +721,155 @@ footer .wrapper {
 .help-column ul li a {
   color: #FFFFFF;
   font-size: 14px;
+}
+
+/* Responsive Styling for Tables size */
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 90%;
+  }
+
+  header {
+    padding-top: 120px; /* Pushes content below nav */
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-content .left,
+  .header-content .right {
+    width: 100%;
+  }
+
+  .header-content .right img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-options {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-options.show {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 100;
+  }
+
+  nav ul li {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+  }
+
+  .LHP .wrapper,
+  .DOMA .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-lhp,
+  .right-lhp,
+  .left-doma,
+  .right-doma {
+    width: 100%;
+    text-align: center;
+  }
+
+  .testimonials .testimonial-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .articles-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article-colum {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  footer .wrapper {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+/* Responsive Styling for Mobile phone size */
+@media (max-width: 600px) {
+
+  h1, h2 {
+    font-size: 28px;
+  }
+
+  p, .btn {
+    font-size: 16px;
+  }
+
+  .service-into p {
+    width: 100%;
+  }
+
+  .service-cards .top-row,
+  .service-cards .bottom-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-options {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .btn.down-icon::before {
+    right: 16px;
+  }
+
+  .btn.down-icon {
+    padding-right: 40px;
+  }
 }
 
 
